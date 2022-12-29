@@ -1,0 +1,43 @@
+@media screen and (min-width: 1200px) {
+    .content{
+        margin: 0px auto;
+        height: auto;
+        padding-left: 150px;
+    }
+  }
+
+
+@media screen and (min-width: 1200px) {
+    .pokemons{
+        margin: 0 150px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .content{
+        margin: 0px auto;
+        height: auto;
+    }
+  }
+
+
+@media screen and (max-width: 1200px) {
+    .pokemons{
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       
+    }
+  }
+
+@media screen and (max-width: 570px) {
+    .pokemons{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+@media screen and (max-width: 320px) {
+    .pokemons{
+        grid-template-columns: 1fr;
+    }
+  }

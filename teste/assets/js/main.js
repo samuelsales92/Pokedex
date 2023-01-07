@@ -25,6 +25,13 @@ const newLi = pokemonList;
     function loadPokemonItens(offset, limit) {
       pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => `
+
+        <div class="flip-box">
+          <div class="flip-box-inner">
+      
+
+        <div class="pokemon1">
+        <span class = "atack">${pokemon.stat}</span>
           <li class="pokemon ${pokemon.type}">
               <span class="number">${pokemon.number}</span>
               <span class="name">${pokemon.name}</span>
@@ -35,7 +42,10 @@ const newLi = pokemonList;
                   </ol>
       
                   <img src="${pokemon.photo}" alt="${pokemon.name}">
-              </div>    
+              </div> 
+            </div> 
+            </div>
+        </div>  
           </li>
         `).join('')
         pokemonList.innerHTML = newHtml

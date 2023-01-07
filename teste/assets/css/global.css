@@ -133,7 +133,7 @@ body {
 
   .pokemon1 {
     
-    transforms: rotateY(180deg);
+    transform: rotateY(180deg);
   }
   
 

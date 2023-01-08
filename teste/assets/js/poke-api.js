@@ -19,6 +19,7 @@ function convertPokeApiDetailPokemon(pokeDetail){
     const stats = pokeDetail.stats.map((stats) => stats.base_stat)
     const [stat] = stats
     pokemon.stat = stat
+    pokemon.atack = stats[1]
 
     return pokemon
 }

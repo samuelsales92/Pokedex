@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonlist')
 const loadMoreButton = document.getElementById('loadMore')
 const clearPage = document.getElementById ('clearPage')
-let limit = 16
+let limit = 12
 let offset = 0
 const maxRecords = 151
 
@@ -26,13 +26,19 @@ const newLi = pokemonList;
       pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => `
 
-        <div class="flip-box">
+    <div class="flip-box">
           <div class="flip-box-inner">
-      
-
-        <div class="pokemon1">
-        <span class = "atack">${pokemon.stat}</span>
-          <li class="pokemon ${pokemon.type}">
+    <div class="flip-box-back">
+          <span class = "atack-back">HP:&nbsp;${pokemon.stat}
+            <span class = "atack-back">Atack:&nbsp;${pokemon.atack}
+            </span>
+          </span>
+            <img class = "img-back"src="${pokemon.photo}" alt="${pokemon.name}">
+        </div>
+        
+        
+    <div class="flip-box-front">
+        <li class="pokemon ${pokemon.type}">
               <span class="number">${pokemon.number}</span>
               <span class="name">${pokemon.name}</span>
       
@@ -42,10 +48,11 @@ const newLi = pokemonList;
                   </ol>
       
                   <img src="${pokemon.photo}" alt="${pokemon.name}">
+                  </div>
               </div> 
             </div> 
             </div>
-        </div>  
+        
           </li>
         `).join('')
         pokemonList.innerHTML = newHtml
@@ -73,7 +80,7 @@ loadPokemonItens(offset, limit)
   });
 
     clearPage.addEventListener('click', () =>{
-      limit = 16
+      limit = 12
 
       if ( offset <= limit) { 
         offset = 0

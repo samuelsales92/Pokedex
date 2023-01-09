@@ -20,6 +20,8 @@ function convertPokeApiDetailPokemon(pokeDetail){
     const [stat] = stats
     pokemon.stat = stat
     pokemon.atack = stats[1]
+    pokemon.defense = stats[2]
+    pokemon.speed = stats[5]
 
     return pokemon
 }

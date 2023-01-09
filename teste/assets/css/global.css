@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color:#f1eeee;
 
@@ -11,7 +12,7 @@ body {
 .content {
     width: 100vw;
     height: auto;
-    padding: 2rem; 
+    padding: .5rem; 
     background-image: url("https://images.hdqwalls.com/download/pokemon-1366x768.jpg");
     color: rgba(255, 255, 255, 0.555);
     
@@ -33,15 +34,19 @@ body {
     }
 
 .grass {
-    background-color:#77c850;
+    background: rgb(119,200,80);
+    background: linear-gradient(142deg, rgba(119,200,80,1) 15%, rgba(54,77,70,1) 96%);
     }
 
 .fire {
-    background-color:#ee7f30;
+    background: rgb(238,127,48);
+    background: linear-gradient(142deg, rgba(238,127,48,1) 15%, rgba(54,77,70,1) 96%);
     }
 
 .water {
-    background-color:#678fee;
+    background: rgb(103,143,238);
+    background: linear-gradient(142deg, rgba(103,143,238,1) 15%, rgba(54,77,70,1) 96%);
+
     }
 
 .electric {
@@ -81,8 +86,9 @@ body {
     }
 
 .bug {
-    background-color:#a8b720;
-    }
+    background: rgb(168,183,32);
+    background: linear-gradient(142deg, rgba(168,183,32,1) 15%, rgba(54,77,70,1) 96%);
+}
 
 .ghost {
     background-color:#6e5896;
@@ -109,13 +115,13 @@ body {
     padding: .2rem 1rem;
     color: white;
     border-radius: 1rem;
-    top: -80px;
+    bottom: 160px;
     
 }
 
 .pokemon:hover{
     transform: scale(1.2);
-    transition: transform 0.2s;
+    transition: transform 1.2s;
     transform-style: preserve-3d;  
     box-shadow: 3px 3px 10px 3px rgb(22, 195, 243);
    
@@ -136,7 +142,7 @@ body {
   
   .flip-box-inner {
     text-align: center;
-    transition: transform 1.8s;
+    transition: transform 2.0s;
     transform-style: preserve-3d;
     width: 150px;
     height: 140px;
@@ -160,19 +166,22 @@ body {
   .flip-box-back {
     font-size: 10px;
     display: flex;
-    flex-direction:row;
+    flex-direction:row-reverse;
     position: relative;
     justify-content: space-around;
     transform: rotateY(180deg);
     margin: .5rem;
-    padding: .2rem 2rem;
+    padding: .2rem .2rem;
     color: white;
     border-radius: 1rem;
-    top: 25px;
-    box-shadow: 3px 3px 100px 3px rgb(22, 195, 243); 
+    bottom: 15px;
+    left: 10px;
+    
    
+    
   }
 
+  
 .pokemon .number {
    color: #000000;
    text-align: right;
@@ -240,23 +249,52 @@ body {
 
 
 .img-back{
-    max-width: 70px;
-    height: 70px;
-    position: relative;
-}
-
-
-
-.flip-box-front {
-    position: relative;
+    width: 100px;
+    height: 180px;
+    position: relative; 
+    display: flex;
    
 }
 
-.atack-back {
-    
-    font-size: 15px;
-    color: rgb(240, 45, 45);
+
+
+
+
+.box-back {
+    width: 200px;
+    height: 150px;
     position: relative;
-    padding: .4rem;
+    display: flex;
+    flex-direction: row;
+    padding: .8rem .5rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 3px 3px 100px 3px rgb(22, 195, 243); 
+    position: relative;
+    background: rgb(182,180,180);
+    background: linear-gradient(49deg, rgba(182,180,180,1) 29%, rgba(54,77,70,1) 96%);
+    opacity: 0.9;
     
+    
+}
+
+.box-back span{
+    margin-right: .2rem;
+}
+.hp-back {
+    color: green;
+}
+
+.atack-back {
+    color: red;
+}
+
+.defense-back{
+    color: rgba(22, 142, 221, 0.979);
+}
+
+.speed-back {
+    color: rgb(31, 71, 31);
 }

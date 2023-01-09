@@ -29,14 +29,19 @@ const newLi = pokemonList;
     <div class="flip-box">
           <div class="flip-box-inner">
     <div class="flip-box-back">
-          <span class = "atack-back">HP:&nbsp;${pokemon.stat}
+        <div class="box-back">
+          <span class = "hp-back">HP:&nbsp;${pokemon.stat}
             <span class = "atack-back">Atack:&nbsp;${pokemon.atack}
+            <span class = "speed-back">Speed:&nbsp;${pokemon.speed}
+            <span class = "defense-back">&nbsp;&nbsp;Defense:&nbsp;${pokemon.defense}
+            </span>
             </span>
           </span>
+        </span>
             <img class = "img-back"src="${pokemon.photo}" alt="${pokemon.name}">
         </div>
-        
-        
+       </div>
+     
     <div class="flip-box-front">
         <li class="pokemon ${pokemon.type}">
               <span class="number">${pokemon.number}</span>

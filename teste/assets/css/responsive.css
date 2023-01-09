@@ -1,16 +1,25 @@
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 370px) {
   .pokemons{
       grid-template-columns: 1fr 1fr; 
+      padding: 1rem;
       
   }
 }
 
+@media screen and (min-width: 425px) {
+  .pokemons{
+      grid-template-columns: 1fr 1fr; 
+      padding: 3rem;
+      
+  }
+}
 
 @media screen and (min-width: 576px) {
   .pokemons{
       grid-template-columns: 1fr 1fr 1fr; 
       margin: 2rem auto;
+      padding: 3rem;
       height: auto; 
       max-width: 576px;
   }
@@ -22,6 +31,7 @@
       margin: 2rem auto;
       height: auto; 
       max-width: 576px;
+      
   }
 }
 
@@ -30,6 +40,7 @@
 @media screen and (min-width: 992px) {
   .content{
       max-width: 992px;
+      padding: 8rem;
       margin: 1rem auto;
       height: auto; 
       border-radius: 1rem;          

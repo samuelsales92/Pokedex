@@ -1,4 +1,5 @@
 /* função somando multiplos */
+
 var a = parseInt(gets(3));
 var N = parseInt(gets(18));
 
@@ -114,3 +115,7 @@ function area_circumscribed(a)
 }
 
 console.log("A area da circuferencia eh: " + area_circumscribed(a));
+
+
+
+
